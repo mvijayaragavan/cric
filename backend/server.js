@@ -9,20 +9,15 @@ const app = express();
 const server = http.createServer(app);
 
 // Enable CORS for frontend
-app.use(cors({
-    origin: 'http://localhost:5174', // Vite default port fallback
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
-}));
+app.use(cors());
 
 app.use(express.json());
 
 // Initialize Socket.io
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:5174',
-        methods: ['GET', 'POST'],
-        credentials: true
+        origin: '*',
+        methods: ['GET', 'POST']
     }
 });
 

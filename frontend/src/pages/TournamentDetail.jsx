@@ -8,7 +8,8 @@ import {
     Calendar,
     BarChart2,
     Settings,
-    Plus
+    Plus,
+    Activity
 } from 'lucide-react';
 import MatchSummaryCard from '../components/match/MatchSummaryCard';
 import PointsTable from '../components/common/PointsTable';
